@@ -1,4 +1,80 @@
-Módulo 1: Programación en JavaScript
-Módulo 2: Lenguaje de Consultas a una Base de Datos
-Módulo 3: Fundamentos de Desarrollo Web
-Módulo 4: Desarrollo de aplicaciones web dinámicas con JavaScript"
+# Módulo 2 - Individual 7 - Sebastián Segura
+# Nota: El símbolo $ indica que el comando debe ser ejecutado en la terminal
+
+# 1. Situarse en la carpeta en la que desee crear el repositorio
+$ cd /Users/sebastianseguraosorio/curso-fullstack/Modulo2
+# No hay respuesta de terminal para el comando cd
+
+# 2. Crear una carpeta y dentro de la misma un repositorio, ambos con el nombre full-stack-JavaScript
+$ mkdir full-stack-JavaScript
+# No hay respuesta de terminal para el comando mkdir
+$ cd full-stack-JavaScript
+# No hay respuesta de terminal para el comando cd
+$ git init
+# Initialized empty Git repository in /Users/sebastianseguraosorio/curso-fullstack/Modulo2/full-stack-JavaScript/.git/
+
+# 3. Generar una consulta que permite verificar el estado del repositorio
+$ git status
+# On branch master
+# 
+# No commits yet
+# 
+# nothing to commit (create/copy files and use "git add" to track)
+
+# 4. Crear un documento de texto de nombre contenidos.txt, con el contenido indicado
+$ echo "Módulo 1: Programación en JavaScript" > contenidos.txt
+# No hay respuesta de terminal para el comando echo
+$ echo "Módulo 2: Lenguaje de Consultas a una Base de Datos" >> contenidos.txt
+# No hay respuesta de terminal para el comando echo
+$ echo "Módulo 3: Fundamentos de Desarrollo Web" >> contenidos.txt
+# No hay respuesta de terminal para el comando echo
+
+# 5. Validar que el contenido ingresado esté efectivamente cargado
+$ cat contenidos.txt
+# Módulo 1: Programación en JavaScript
+# Módulo 2: Lenguaje de Consultas a una Base de Datos
+# Módulo 3: Fundamentos de Desarrollo Web
+
+# 6. Verificar el tamaño del archivo y sus permisos de acceso
+$ ls -lh contenidos.txt
+# -rw-r--r--  1 usuario  grupo  123B fecha-hora contenidos.txt
+
+# 7. Añadir el archivo al repositorio
+$ git add contenidos.txt
+# No hay respuesta de terminal para el comando git add
+
+# 8. Aplicar los cambios realizados sobre el repositorio, usando como mensaje “Primera versión del temario subida a repositorio”
+$ git commit -m "Primera versión del temario subida a repositorio"
+# [master (root-commit) abcd123] Primera versión del temario subida a repositorio
+#  1 file changed, 3 insertions(+)
+#  create mode 100644 contenidos.txt
+
+# 9. Añadir una nueva línea al final del archivo, con el contenido “Módulo 4: Desarrollo de aplicaciones web dinámicas con JavaScript”
+$ echo "Módulo 4: Desarrollo de aplicaciones web dinámicas con JavaScript" >> contenidos.txt
+# No hay respuesta de terminal para el comando echo
+
+# 10. Verificar qué cambios existen en el repositorio que deban ser almacenados
+$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git restore <file>..." to discard changes in working directory)
+# 	modified:   contenidos.txt
+# 
+# no changes added to commit (use "git add" and/or "git commit -a")
+
+# 11. Aplicar nuevamente los cambios en el repositorio, esta vez con el mensaje “Versión actualizada del contenido”
+$ git add contenidos.txt
+# No hay respuesta de terminal para el comando git add
+$ git commit -m "Versión actualizada del contenido"
+# [master 5678efg] Versión actualizada del contenido
+#  1 file changed, 1 insertion(+)
+
+# 12. Ver el registro de cambios creados sobre el repositorio
+$ git log
+
+
+# 13. Finalmente, validar el estado del repositorio
+$ git status
+# On branch master
+# nothing to commit, working tree clean
